@@ -109,7 +109,7 @@ function HostList() {
             </div>
             <body>
                 <div className="container" >
-                    <ul class="nav nav-tabs">
+                    {/* <ul class="nav nav-tabs">
                         <Link to="/create">
                             <button type="button" className="btn btn-primary" style={{ marginRight: "2%", position: 'absolute', left: "77%" }}>Đăng nhà
                             </button>
@@ -120,7 +120,7 @@ function HostList() {
                         <li class="nav-item">
                             <a class="nav-link " href={`https://fe-duan-production.up.railway.app/order/${idAccount}`}>Danh sách đăng ký thuê</a>
                         </li>
-                    </ul>
+                    </ul> */}
 
 
                     <table class="custom-table">
@@ -138,9 +138,9 @@ function HostList() {
                                 <tr key={index}>
                                     <th scope="row">{index + 1}</th>
                                     <td>
-                                        <a href={`detail/${house.id}`} className="custom-link">
+                                        {/* <a href={`detail/${house.id}`} className="custom-link">
                                             {house.name}
-                                        </a>
+                                        </a> */}
                                     </td>
                                     <td>{house.address}</td>
                                     <td>{formatCurrency(house.price)}</td>

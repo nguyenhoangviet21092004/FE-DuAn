@@ -128,14 +128,14 @@ function Confirm() {
                 </div>
                 <body>
                     <div className="container" style={{ minHeight: '19rem' }}>
-                        <ul class="nav nav-tabs">
+                        {/* <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <a class="nav-link " href="https://fe-duan-production.up.railway.app/host">Danh sách nhà cho thuê</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href={`https://fe-duan-production.up.railway.app//order/${idAccount}`}>Danh sách đăng ký thuê</a>
                             </li>
-                        </ul>
+                        </ul> */}
                         <table className="custom-table">
                             <thead>
                                 <tr>
