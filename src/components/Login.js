@@ -92,17 +92,17 @@ function Login() {
                                     <p class="text-center fw-bold mx-3 mb-0 text-muted">Hoặc</p>
                                 </div>
 
-                                <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#3b5998", width: '100%' }} 
+                                <p data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#3b5998", width: '100%' }} 
                                     role="button">
                                     <i class="fab fa-facebook-f me-2"></i>Đăng nhập với Facebook
-                                </a>
-                                <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#55acee", width: '100%' }} 
+                                </p>
+                                <p data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#55acee", width: '100%' }} 
                                     role="button">
-                                    <i class="fab fa-twitter me-2"></i>Đăng nhập với Twitter</a>
+                                    <i class="fab fa-twitter me-2"></i>Đăng nhập với Twitter</p>
 
-                                <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ backgroundColor: "#dc4e41", width: '100%' }} 
+                                <p data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ backgroundColor: "#dc4e41", width: '100%' }} 
                                     role="button">
-                                    <i class="fab fa-google me-2"></i>Đăng nhập với Google</a>
+                                    <i class="fab fa-google me-2"></i>Đăng nhập với Google</p>
                             </form>
                         </div>
                     </div>

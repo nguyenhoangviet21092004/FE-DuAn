@@ -119,7 +119,7 @@ function History() {
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
                                             <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                            <li><a className="dropdown-item">Chi tiết tài khoản</a></li>
+                                           
                                         </ul>
                                     </li>
                                 )}
