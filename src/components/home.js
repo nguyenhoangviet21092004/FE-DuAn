@@ -51,7 +51,7 @@ export default function Home() {
 
             pageItems.push(
                 <li className={`page-item ${isActive}`} key={i}>
-                    <a className="page-link" onClick={() => currentPage + 1}>{i}</a>
+                    <p className="page-link" onClick={() => currentPage + 1}>{i}</p>
                 </li>
             );
         }

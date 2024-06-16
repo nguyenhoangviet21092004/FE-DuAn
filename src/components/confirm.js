@@ -41,7 +41,7 @@ function Confirm() {
             const isActive = i === currentPage ? 'active' : '';
             pageItems.push(
                 <li className={`page-item ${isActive}`} key={i}>
-                    <a className="page-link" onClick={() => currentPage + 1}>{i}</a>
+                    <p className="page-link" onClick={() => currentPage + 1}>{i}</p>
                 </li>
             );
         }
@@ -153,9 +153,9 @@ function Confirm() {
                                         <td scope="row">{i + 1}</td>
                                         <td>{order.account.name}</td>
                                         <td>
-                                            <a href={`https://fe-duan-production.up.railway.app/detail/${order.house.id}`} className="custom-link">
+                                            {/* <a href={`https://fe-duan-production.up.railway.app/detail/${order.house.id}`} className="custom-link">
                                                 {order.house.name}
-                                            </a>
+                                            </a> */}
                                         </td>
                                         <td>{order.house.address}</td>
                                         <td>{formatCurrency(order.revenue)}</td>
