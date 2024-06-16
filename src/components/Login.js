@@ -82,7 +82,7 @@ function Login() {
                                         <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
                                         <label class="form-check-label" for="form1Example3"> Ghi nhớ đăng nhập </label>
                                     </div>
-                                   
+                                    <a href="#!">Quên mật khẩu</a>
                                 </div>
 
                                 {/* <!-- Submit button --> */}
@@ -92,17 +92,17 @@ function Login() {
                                     <p class="text-center fw-bold mx-3 mb-0 text-muted">Hoặc</p>
                                 </div>
 
-                                <p data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#3b5998", width: '100%' }} 
+                                <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#3b5998", width: '100%' }} href="#!"
                                     role="button">
                                     <i class="fab fa-facebook-f me-2"></i>Đăng nhập với Facebook
-                                </p>
-                                <p data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#55acee", width: '100%' }} 
+                                </a>
+                                <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ marginBottom: '1%', backgroundColor: "#55acee", width: '100%' }} href="#!"
                                     role="button">
-                                    <i class="fab fa-twitter me-2"></i>Đăng nhập với Twitter</p>
+                                    <i class="fab fa-twitter me-2"></i>Đăng nhập với Twitter</a>
 
-                                <p data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ backgroundColor: "#dc4e41", width: '100%' }} 
+                                <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style={{ backgroundColor: "#dc4e41", width: '100%' }} href="#!"
                                     role="button">
-                                    <i class="fab fa-google me-2"></i>Đăng nhập với Google</p>
+                                    <i class="fab fa-google me-2"></i>Đăng nhập với Google</a>
                             </form>
                         </div>
                     </div>

@@ -51,7 +51,7 @@ export default function Home() {
 
             pageItems.push(
                 <li className={`page-item ${isActive}`} key={i}>
-                    <p className="page-link" onClick={() => currentPage + 1}>{i}</p>
+                    <a className="page-link" onClick={() => currentPage + 1}>{i}</a>
                 </li>
             );
         }
@@ -78,7 +78,7 @@ export default function Home() {
 
         <div className="body">
             <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
-                {/* <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+                <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/home">
                             <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
@@ -93,32 +93,32 @@ export default function Home() {
                                 {role === 'admin' || role === 'host' ? (
                                     <>
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {username}
                                             </a>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
                                                 <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
                                                 <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                               
+                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                             </ul>
                                         </li>
                                     </>
                                 ) : (
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {username}
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
                                             <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                           
+                                            <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                         </ul>
                                     </li>
                                 )}
                             </ul>
                         </div>
                     </div>
-                </nav> */}
+                </nav>
             </div>
             <div className="navbars">
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -268,7 +268,7 @@ export default function Home() {
                     </div>
                     <div className="right"></div>
                 </div>
-                {/* <div style={{ marginTop: '1rem' }}>
+                <div style={{ marginTop: '1rem' }}>
                     <nav aria-label="Page navigation example">
                         <ul className="pagination justify-content-center">
                             <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -280,7 +280,7 @@ export default function Home() {
                             </li>
                         </ul>
                     </nav>
-                </div> */}
+                </div>
 
             </div>
             <div className="footer">

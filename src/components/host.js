@@ -33,7 +33,7 @@ function HostList() {
 
             pageItems.push(
                 <li className={`page-item ${isActive}`} key={i}>
-                    <p className="page-link" onClick={() => currentPage + 1}>{i}</p>
+                    <a className="page-link" onClick={() => currentPage + 1}>{i}</a>
                 </li>
             );
         }
@@ -80,25 +80,25 @@ function HostList() {
                                 {role === 'admin' || role === 'host' ? (
                                     <>
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {username}
                                             </a>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
                                                 <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
                                                 <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                               
+                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                             </ul>
                                         </li>
                                     </>
                                 ) : (
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {username}
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
                                             <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                            
+                                            <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                         </ul>
                                     </li>
                                 )}
@@ -109,18 +109,18 @@ function HostList() {
             </div>
             <body>
                 <div className="container" >
-                    {/* <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs">
                         <Link to="/create">
                             <button type="button" className="btn btn-primary" style={{ marginRight: "2%", position: 'absolute', left: "77%" }}>Đăng nhà
                             </button>
                         </Link>
                         <li class="nav-item">
-                            <a class="nav-link active" href="https://fe-duan-production.up.railway.app/host">Danh sách nhà cho thuê</a>
+                            <a class="nav-link active" href="/host">Danh sách nhà cho thuê</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href={`https://fe-duan-production.up.railway.app/order/${idAccount}`}>Danh sách đăng ký thuê</a>
+                            <a class="nav-link " href={`/order/${idAccount}`}>Danh sách đăng ký thuê</a>
                         </li>
-                    </ul> */}
+                    </ul>
 
 
                     <table class="custom-table">
@@ -138,9 +138,9 @@ function HostList() {
                                 <tr key={index}>
                                     <th scope="row">{index + 1}</th>
                                     <td>
-                                        {/* <a href={`detail/${house.id}`} className="custom-link">
+                                        <a href={`detail/${house.id}`} className="custom-link">
                                             {house.name}
-                                        </a> */}
+                                        </a>
                                     </td>
                                     <td>{house.address}</td>
                                     <td>{formatCurrency(house.price)}</td>
@@ -159,7 +159,7 @@ function HostList() {
                     </table>
                 </div>
             </body>
-            {/* <div style={{ marginTop: '1rem' }}>
+            <div style={{ marginTop: '1rem' }}>
                 <nav aria-label="Page navigation example">
                     <ul className="pagination justify-content-center">
                         <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -172,7 +172,7 @@ function HostList() {
 
                     </ul>
                 </nav>
-            </div> */}
+            </div>
             <div className="footer">
                 <Footer />
             </div>

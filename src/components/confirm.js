@@ -41,7 +41,7 @@ function Confirm() {
             const isActive = i === currentPage ? 'active' : '';
             pageItems.push(
                 <li className={`page-item ${isActive}`} key={i}>
-                    <p className="page-link" onClick={() => currentPage + 1}>{i}</p>
+                    <a className="page-link" onClick={() => currentPage + 1}>{i}</a>
                 </li>
             );
         }
@@ -84,7 +84,7 @@ function Confirm() {
         <>
             <div>
                 <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
-                    <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+                    {/* <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                         <div className="container-fluid">
                             <a className="navbar-brand" href="/home">
                                 <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
@@ -99,41 +99,41 @@ function Confirm() {
                                     {role === 'admin' || role === 'host' ? (
                                         <>
                                             <li className="nav-item dropdown">
-                                                <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <a className="nav-link dropdown-toggle" zz role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     {username}
                                                 </a>
                                                 <ul className="dropdown-menu dropdown-menu-end">
                                                     <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
                                                     <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
                                                     <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                                  
+                                                    <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                                 </ul>
                                             </li>
                                         </>
                                     ) : (
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {username}
                                             </a>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                               
+                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                             </ul>
                                         </li>
                                     )}
                                 </ul>
                             </div>
                         </div>
-                    </nav>
+                    </nav> */}
                 </div>
                 <body>
                     <div className="container" style={{ minHeight: '19rem' }}>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link " href="https://fe-duan-production.up.railway.app/host">Danh sách nhà cho thuê</a>
+                                <a class="nav-link " href="/host">Danh sách nhà cho thuê</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href={`https://fe-duan-production.up.railway.app//order/${idAccount}`}>Danh sách đăng ký thuê</a>
+                                <a class="nav-link active" href={`/order/${idAccount}`}>Danh sách đăng ký thuê</a>
                             </li>
                         </ul>
                         <table className="custom-table">
@@ -153,9 +153,9 @@ function Confirm() {
                                         <td scope="row">{i + 1}</td>
                                         <td>{order.account.name}</td>
                                         <td>
-                                            {/* <a href={`https://fe-duan-production.up.railway.app/detail/${order.house.id}`} className="custom-link">
+                                            <a href={`detail/${order.house.id}`} className="custom-link">
                                                 {order.house.name}
-                                            </a> */}
+                                            </a>
                                         </td>
                                         <td>{order.house.address}</td>
                                         <td>{formatCurrency(order.revenue)}</td>
@@ -188,18 +188,18 @@ function Confirm() {
 
 
             </div>
-            {/* <div style={{ marginTop: '1rem' }}>
+            <div style={{ marginTop: '1rem' }}>
                 <nav aria-label="Page navigation example">
                     <ul className="pagination justify-content-center">
                         <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-                            <a hrefclassName="page-link" onClick={() => setCurrentPage(currentPage - 1)}>Previous</a>
+                            <a className="page-link" onClick={() => setCurrentPage(currentPage - 1)}>Previous</a>
                         </li>{renderPageItems()}
                         <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
                             <a className="page-link" onClick={() => setCurrentPage(currentPage + 1)}>Next</a>
                         </li>
                     </ul>
                 </nav>
-            </div> */}
+            </div>
             <div className="footer">
                 <Footer />
             </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import SideBar from "./sidebar/sidebar";
 import { da } from "date-fns/locale";
 import moment from "moment";
 import Footer from "./Footer";
@@ -101,25 +102,25 @@ function History() {
                                 {role === 'admin' || role === 'host' ? (
                                     <>
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a className="nav-link dropdown-toggle" z role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {username}
                                             </a>
                                             <ul className="dropdown-menu dropdown-menu-end">
                                                 <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
                                                 <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
                                                 <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                               
+                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                             </ul>
                                         </li>
                                     </>
                                 ) : (
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {username}
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
                                             <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                           
+                                            <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
                                         </ul>
                                     </li>
                                 )}
@@ -186,7 +187,7 @@ function History() {
                         </tbody>
                     </table>
                 </div>
-                {/* <div style={{ marginTop: '1rem' }}>
+                <div style={{ marginTop: '1rem' }}>
                     <nav aria-label="Page navigation example">
                         <ul className="pagination justify-content-center">
                             <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -197,7 +198,7 @@ function History() {
                             </li>
                         </ul>
                     </nav>
-                </div> */}
+                </div>
                 <div className="footer">
                     <Footer />
                 </div>
