@@ -81,7 +81,7 @@ function Confirm() {
 
     return (
         <>
-            <div>
+            {/* <div>
             <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
                 <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
@@ -199,7 +199,7 @@ function Confirm() {
             </div>
             <div className="footer">
                 <Footer />
-            </div>
+            </div> */}
         </>
     )
 }
