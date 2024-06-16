@@ -193,169 +193,170 @@ function Detail() {
         return current && (current.isBefore(currentDate, 'day') || datesDB.includes(current.format('YYYY-MM-DD')));
     };
     return (
-        <div>
-            <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
-                {/* <nav className="navbar navbar-expand-lg bg-white shadow-sm">
-                    <div className="container-fluid">
-                        <a className="navbar-brand" href="/home">
-                            <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
-                        </a>
-                        <a className="nav-link active" aria-current="page" href="/home">Trang chủ</a>
+        // <div>
+        //     <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+        //         <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+        //             <div className="container-fluid">
+        //                 <a className="navbar-brand" href="/home">
+        //                     <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
+        //                 </a>
+        //                 <a className="nav-link active" aria-current="page" href="/home">Trang chủ</a>
 
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul className="navbar-nav">
-                                {role === 'admin' || role === 'host' ? (
-                                    <>
-                                        <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                {username}
-                                            </a>
-                                            <ul className="dropdown-menu dropdown-menu-end">
-                                                <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
-                                                <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
-                                                <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
-                                            </ul>
-                                        </li>
-                                    </>
-                                ) : (
-                                    <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {username}
-                                        </a>
-                                        <ul className="dropdown-menu dropdown-menu-end">
-                                            <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                           z
-                                        </ul>
-                                    </li>
-                                )}
-                            </ul>
-                        </div>
-                    </div>
-                </nav> */}
-            </div>
+        //                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        //                     <span className="navbar-toggler-icon"></span>
+        //                 </button>
+        //                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        //                     <ul className="navbar-nav">
+        //                         {role === 'admin' || role === 'host' ? (
+        //                             <>
+        //                                 <li className="nav-item dropdown">
+        //                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        //                                         {username}
+        //                                     </a>
+        //                                     <ul className="dropdown-menu dropdown-menu-end">
+        //                                         <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
+        //                                         <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
+        //                                         <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
+        //                                         <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
+        //                                     </ul>
+        //                                 </li>
+        //                             </>
+        //                         ) : (
+        //                             <li className="nav-item dropdown">
+        //                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        //                                     {username}
+        //                                 </a>
+        //                                 <ul className="dropdown-menu dropdown-menu-end">
+        //                                     <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
+        //                                    z
+        //                                 </ul>
+        //                             </li>
+        //                         )}
+        //                     </ul>
+        //                 </div>
+        //             </div>
+        //         </nav>
+        //     </div>
 
-            <div class="blog-single">
-                <div class="container-fluid " >
+        //     <div class="blog-single">
+        //         <div class="container-fluid " >
 
-                    <div class="row justify-content-center">
+        //             <div class="row justify-content-center">
 
-                        <div class="col-lg-8 m-15px-tb">
-                            <article style={{ overflow: "visible" }} className="article">
-                                <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                                    <div className="carousel-inner">
-                                        {house.images?.map((item, index) => (
-                                            <div className={`carousel-item ${index === 0 ? 'active' : ''}`}
-                                                style={{ height: '500px' }}>
-                                                <img src={process.env.PUBLIC_URL + 'http://api-hotel.up.railway.app/img/' + (item.nameImage)}
-                                                    className="d-block w-100 h-100 object-fit-cover"
-                                                    alt={`Carousel Image ${index + 1}`} />
-                                            </div>
-                                        ))}
-                                    </div>
+        //                 <div class="col-lg-8 m-15px-tb">
+        //                     <article style={{ overflow: "visible" }} className="article">
+        //                         <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+        //                             <div className="carousel-inner">
+        //                                 {house.images?.map((item, index) => (
+        //                                     <div className={`carousel-item ${index === 0 ? 'active' : ''}`}
+        //                                         style={{ height: '500px' }}>
+        //                                         <img src={process.env.PUBLIC_URL + 'https://api-hotel.up.railway.app//img/' + (item.nameImage)}
+        //                                             className="d-block w-100 h-100 object-fit-cover"
+        //                                             alt={`Carousel Image ${index + 1}`} />
+        //                                     </div>
+        //                                 ))}
+        //                             </div>
 
-                                    <button className="carousel-control-prev" type="button"
-                                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button className="carousel-control-next" type="button"
-                                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                                <div className="test" style={{ display: "flex" }} >
-                                    <div className="test1" style={{ marginTop: '4%' }}>
-                                        <div style={{ display: "flex" }}>
-                                            <h1 style={{ height: '55px', marginBottom: '0', lineHeight: '55px', marginRight: '8px' }}>{house.name}</h1>
-                                            <h5 style={{
-                                                lineHeight: '72px', height: '55px', marginBottom: '0'
-                                            }}>({formattedNumber} VND/ ngày)</h5>
+        //                             <button className="carousel-control-prev" type="button"
+        //                                 data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        //                                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        //                                 <span className="visually-hidden">Previous</span>
+        //                             </button>
+        //                             <button className="carousel-control-next" type="button"
+        //                                 data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        //                                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        //                                 <span className="visually-hidden">Next</span>
+        //                             </button>
+        //                         </div>
+        //                         <div className="test" style={{ display: "flex" }} >
+        //                             <div className="test1" style={{ marginTop: '4%' }}>
+        //                                 <div style={{ display: "flex" }}>
+        //                                     <h1 style={{ height: '55px', marginBottom: '0', lineHeight: '55px', marginRight: '8px' }}>{house.name}</h1>
+        //                                     <h5 style={{
+        //                                         lineHeight: '72px', height: '55px', marginBottom: '0'
+        //                                     }}>({formattedNumber} VND/ ngày)</h5>
 
-                                        </div>
-                                        <p style={{ marginRight: '5px', fontStyle: 'italic', color: 'grey' }}>Ngày đăng:  {moment(house.createdAt).format('DD/MM/YYYY  HH:mm:ss')}</p>
+        //                                 </div>
+        //                                 <p style={{ marginRight: '5px', fontStyle: 'italic', color: 'grey' }}>Ngày đăng:  {moment(house.createdAt).format('DD/MM/YYYY  HH:mm:ss')}</p>
 
-                                        <div className="article-content">
-                                            <div style={{ display: 'flex' }}>
-                                                <h6 style={{ marginRight: '5px' }}>Số phòng ngủ: {house.numberOfBedRoom}</h6>
-                                                <p>,</p>
-                                                <h6 style={{ marginLeft: '5px' }}>Số phòng tắm: {house.numberOfBathRoom}</h6>
-                                            </div>
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                                            <p style={{ marginRight: '8px', fontSize: '20px' }}><b>Địa chỉ:</b><br /> <small>{house.address}</small></p>
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                                            <p style={{ marginRight: '8px', fontSize: '20px' }}><b>Phương thức liên hệ:</b><br /><small>SĐT: {account.phoneNumber}</small></p>
-                                        </div>
-                                    </div>
-                                    <div className="test2" style={{ position: 'sticky', left: '66%', marginTop: "4%", borderRadius: '10px', boxShadow: '0px 0px 8px #888888' }}>
-                                        <div style={{ margin: '10%' }}>                                        <p>Ngày bắt đầu | Ngày kết thúc </p>
-                                            <Space direction="vertical" size={12}>
-                                                <RangePicker onChange={handleDateRangeChange}
-                                                    disabledDate={disabledDate}
-                                                    placeholder={['Ngày bắt đầu', 'Ngày kết thúc']}
-                                                    format="DD-MM-YYYY"
-                                                    value={dateRange.length > 0 ? [dayjs(dateRange[0], 'DD-MM-YYYY'), dayjs(dateRange[1], 'DD-MM-YYYY')] : []}
-                                                    style={{
-                                                        padding: '8px 12px',
-                                                    }}
-                                                />
-                                            </Space>
-                                            <p>Số ngày thuê: {numDays}</p>
-                                            <p>Tổng tiền: {formatCurrency(numDays * price)} </p>
-                                            {formattedErrorMessages.length > 0 && <div>
-                                                <span style={{ color: 'red' }}>Ngày </span>
-                                                {formattedErrorMessages.map((mess, index) => (
-                                                    <span key={index} style={{ color: 'red' }}>
-                                                        {mess}
-                                                        {index < formattedErrorMessages.length - 1 ? ', ' : ''}
-                                                    </span>
-                                                ))}
-                                                <span style={{ color: 'red' }}> đã được đặt</span>
-                                            </div>}
+        //                                 <div className="article-content">
+        //                                     <div style={{ display: 'flex' }}>
+        //                                         <h6 style={{ marginRight: '5px' }}>Số phòng ngủ: {house.numberOfBedRoom}</h6>
+        //                                         <p>,</p>
+        //                                         <h6 style={{ marginLeft: '5px' }}>Số phòng tắm: {house.numberOfBathRoom}</h6>
+        //                                     </div>
+        //                                 </div>
+        //                                 <div style={{ display: 'flex', alignItems: 'center' }}>
+        //                                     <p style={{ marginRight: '8px', fontSize: '20px' }}><b>Địa chỉ:</b><br /> <small>{house.address}</small></p>
+        //                                 </div>
+        //                                 <div style={{ display: 'flex', alignItems: 'center' }}>
+        //                                     <p style={{ marginRight: '8px', fontSize: '20px' }}><b>Phương thức liên hệ:</b><br /><small>SĐT: {account.phoneNumber}</small></p>
+        //                                 </div>
+        //                             </div>
+        //                             <div className="test2" style={{ position: 'sticky', left: '66%', marginTop: "4%", borderRadius: '10px', boxShadow: '0px 0px 8px #888888' }}>
+        //                                 <div style={{ margin: '10%' }}>                                        <p>Ngày bắt đầu | Ngày kết thúc </p>
+        //                                     <Space direction="vertical" size={12}>
+        //                                         <RangePicker onChange={handleDateRangeChange}
+        //                                             disabledDate={disabledDate}
+        //                                             placeholder={['Ngày bắt đầu', 'Ngày kết thúc']}
+        //                                             format="DD-MM-YYYY"
+        //                                             value={dateRange.length > 0 ? [dayjs(dateRange[0], 'DD-MM-YYYY'), dayjs(dateRange[1], 'DD-MM-YYYY')] : []}
+        //                                             style={{
+        //                                                 padding: '8px 12px',
+        //                                             }}
+        //                                         />
+        //                                     </Space>
+        //                                     <p>Số ngày thuê: {numDays}</p>
+        //                                     <p>Tổng tiền: {formatCurrency(numDays * price)} </p>
+        //                                     {formattedErrorMessages.length > 0 && <div>
+        //                                         <span style={{ color: 'red' }}>Ngày </span>
+        //                                         {formattedErrorMessages.map((mess, index) => (
+        //                                             <span key={index} style={{ color: 'red' }}>
+        //                                                 {mess}
+        //                                                 {index < formattedErrorMessages.length - 1 ? ', ' : ''}
+        //                                             </span>
+        //                                         ))}
+        //                                         <span style={{ color: 'red' }}> đã được đặt</span>
+        //                                     </div>}
 
 
-                                            <form onSubmit={BookHouse}>
-                                                <input type="submit" value="Đặt nhà" />
-                                            </form>
+        //                                     <form onSubmit={BookHouse}>
+        //                                         <input type="submit" value="Đặt nhà" />
+        //                                     </form>
 
-                                        </div>
+        //                                 </div>
 
-                                    </div>
-                                </div>
-                            </article>
-                            <div class="contact-form article-comment">
-                                <h4>Nhận xét</h4>
-                                <form id="contact-form" method="POST">
-                                    <div class="row">
+        //                             </div>
+        //                         </div>
+        //                     </article>
+        //                     <div class="contact-form article-comment">
+        //                         <h4>Nhận xét</h4>
+        //                         <form id="contact-form" method="POST">
+        //                             <div class="row">
 
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea name="message" id="message"
-                                                    placeholder="Để lại nhật xét của bạn" rows="4"
-                                                    class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style={{ marginTop: "4%" }}>
-                                            <button type="button" class="btn btn-outline-success">Đăng</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+        //                                 <div class="col-md-12">
+        //                                     <div class="form-group">
+        //                                         <textarea name="message" id="message"
+        //                                             placeholder="Để lại nhật xét của bạn" rows="4"
+        //                                             class="form-control"></textarea>
+        //                                     </div>
+        //                                 </div>
+        //                                 <div class="col-md-12" style={{ marginTop: "4%" }}>
+        //                                     <button type="button" class="btn btn-outline-success">Đăng</button>
+        //                                 </div>
+        //                             </div>
+        //                         </form>
+        //                     </div>
+        //                 </div>
 
-                    </div>
-                </div>
-            </div>
-            <div className="footer">
-                <Footer />
-            </div>
-        </div>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     <div className="footer">
+        //         <Footer />
+        //     </div>
+        // </div>
+        <></>
     )
 }
 

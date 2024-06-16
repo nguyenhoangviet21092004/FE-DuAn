@@ -83,126 +83,127 @@ function History() {
         return pageItems;
     };
     return (
-        <div style={{ height: '100vh' }}>
+        // <div style={{ height: '100vh' }}>
 
-            <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
-                {/* <nav className="navbar navbar-expand-lg bg-white shadow-sm">
-                    <div className="container-fluid">
-                        <a className="navbar-brand" href="/home">
-                            <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
-                        </a>
-                        <a className="nav-link active" aria-current="page" href="/home">Trang chủ</a>
+        //     <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+        //         <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+        //             <div className="container-fluid">
+        //                 <a className="navbar-brand" href="/home">
+        //                     <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
+        //                 </a>
+        //                 <a className="nav-link active" aria-current="page" href="/home">Trang chủ</a>
 
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul className="navbar-nav">
-                                {role === 'admin' || role === 'host' ? (
-                                    <>
-                                        <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" z role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                {username}
-                                            </a>
-                                            <ul className="dropdown-menu dropdown-menu-end">
-                                                <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
-                                                <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
-                                                <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
-                                            </ul>
-                                        </li>
-                                    </>
-                                ) : (
-                                    <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            {username}
-                                        </a>
-                                        <ul className="dropdown-menu dropdown-menu-end">
-                                            <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                            <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
-                                        </ul>
-                                    </li>
-                                )}
-                            </ul>
-                        </div>
-                    </div>
-                </nav> */}
-            </div>
-            <body>
-                <div className="container" style={{ marginTop: '2%', minHeight: '19rem' }}>
-                    <h2>Danh sách nhà đang thuê</h2>
-                    <table class="custom-table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Thời gian</th>
-                                <th>Tên nhà</th>
-                                <th>Số ngày thuê</th>
-                                <th>Tổng tiền</th>
-                                <th>Địa chỉ</th>
-                                <th>Trạng thái</th>
-                                <th>Hành động</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {order.reverse().map((item, i) => (
-                                <tr key={i}>
-                                    <td>{i + 1}</td>
-                                    <td>{item.timeStart} đến {item.timeEnd}</td>
-                                    <td><Link to="/detail" className="custom-link">{item.house.name}</Link></td>
-                                    <td>{item.total}</td>
-                                    <td>{formatCurrency(item.revenue)}</td>
-                                    <td>{item.house.address}</td>
-                                    <td>
-                                        {(() => {
-                                            switch (item.status.id) {
-                                                case 1:
-                                                    return 'Từ trối';
-                                                case 2:
-                                                    return 'Đã thuê';
-                                                case 3:
-                                                    return 'Chờ duyệt';
-                                                default:
-                                                    return 'Đã hủy';
-                                            }
-                                        })()}
-                                    </td>
+        //                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        //                     <span className="navbar-toggler-icon"></span>
+        //                 </button>
+        //                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+        //                     <ul className="navbar-nav">
+        //                         {role === 'admin' || role === 'host' ? (
+        //                             <>
+        //                                 <li className="nav-item dropdown">
+        //                                     <a className="nav-link dropdown-toggle" z role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        //                                         {username}
+        //                                     </a>
+        //                                     <ul className="dropdown-menu dropdown-menu-end">
+        //                                         <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
+        //                                         <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
+        //                                         <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
+        //                                         <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
+        //                                     </ul>
+        //                                 </li>
+        //                             </>
+        //                         ) : (
+        //                             <li className="nav-item dropdown">
+        //                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        //                                     {username}
+        //                                 </a>
+        //                                 <ul className="dropdown-menu dropdown-menu-end">
+        //                                     <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
+        //                                     <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
+        //                                 </ul>
+        //                             </li>
+        //                         )}
+        //                     </ul>
+        //                 </div>
+        //             </div>
+        //         </nav>
+        //     </div>
+        //     <body>
+        //         <div className="container" style={{ marginTop: '2%', minHeight: '19rem' }}>
+        //             <h2>Danh sách nhà đang thuê</h2>
+        //             <table class="custom-table">
+        //                 <thead>
+        //                     <tr>
+        //                         <th>#</th>
+        //                         <th>Thời gian</th>
+        //                         <th>Tên nhà</th>
+        //                         <th>Số ngày thuê</th>
+        //                         <th>Tổng tiền</th>
+        //                         <th>Địa chỉ</th>
+        //                         <th>Trạng thái</th>
+        //                         <th>Hành động</th>
+        //                     </tr>
+        //                 </thead>
+        //                 <tbody>
+        //                     {order.reverse().map((item, i) => (
+        //                         <tr key={i}>
+        //                             <td>{i + 1}</td>
+        //                             <td>{item.timeStart} đến {item.timeEnd}</td>
+        //                             <td><Link to="/detail" className="custom-link">{item.house.name}</Link></td>
+        //                             <td>{item.total}</td>
+        //                             <td>{formatCurrency(item.revenue)}</td>
+        //                             <td>{item.house.address}</td>
+        //                             <td>
+        //                                 {(() => {
+        //                                     switch (item.status.id) {
+        //                                         case 1:
+        //                                             return 'Từ trối';
+        //                                         case 2:
+        //                                             return 'Đã thuê';
+        //                                         case 3:
+        //                                             return 'Chờ duyệt';
+        //                                         default:
+        //                                             return 'Đã hủy';
+        //                                     }
+        //                                 })()}
+        //                             </td>
 
-                                    <td>
-                                        {item.status.id === 3 &&
-                                            <div>
-                                                {moment(item.timeStart).toDate().getDate() > today.getDate() && moment(item.timeStart).toDate().getDate() - today.getDate() >= 1 ? (
-                                                    <button type="button" style={{ border: 'none' }} onClick={() => cancelOrder(item)} className="custom-button custom-button--danger">
-                                                        Hủy thuê
-                                                    </button>
-                                                ) : moment(item.timeStart).toDate().getDate() < today.getDate() && item.status.name !== "Đã thuê" ? (
-                                                    <div className="custom-text">Quá hạn thuê</div>
-                                                ) : null}
-                                            </div>
-                                        }
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
-                <div style={{ marginTop: '1rem' }}>
-                    <nav aria-label="Page navigation example">
-                        <ul className="pagination justify-content-center">
-                            <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-                                <a className="page-link" onClick={() => setCurrentPage(currentPage - 1)}>Previous</a>
-                            </li>{renderPageItems()}
-                            <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-                                <a className="page-link" onClick={() => setCurrentPage(currentPage + 1)}>Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="footer">
-                    <Footer />
-                </div>
-            </body>
-        </div>
+        //                             <td>
+        //                                 {item.status.id === 3 &&
+        //                                     <div>
+        //                                         {moment(item.timeStart).toDate().getDate() > today.getDate() && moment(item.timeStart).toDate().getDate() - today.getDate() >= 1 ? (
+        //                                             <button type="button" style={{ border: 'none' }} onClick={() => cancelOrder(item)} className="custom-button custom-button--danger">
+        //                                                 Hủy thuê
+        //                                             </button>
+        //                                         ) : moment(item.timeStart).toDate().getDate() < today.getDate() && item.status.name !== "Đã thuê" ? (
+        //                                             <div className="custom-text">Quá hạn thuê</div>
+        //                                         ) : null}
+        //                                     </div>
+        //                                 }
+        //                             </td>
+        //                         </tr>
+        //                     ))}
+        //                 </tbody>
+        //             </table>
+        //         </div>
+        //         <div style={{ marginTop: '1rem' }}>
+        //             <nav aria-label="Page navigation example">
+        //                 <ul className="pagination justify-content-center">
+        //                     <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+        //                         <a className="page-link" onClick={() => setCurrentPage(currentPage - 1)}>Previous</a>
+        //                     </li>{renderPageItems()}
+        //                     <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+        //                         <a className="page-link" onClick={() => setCurrentPage(currentPage + 1)}>Next</a>
+        //                     </li>
+        //                 </ul>
+        //             </nav>
+        //         </div>
+        //         <div className="footer">
+        //             <Footer />
+        //         </div>
+        //     </body>
+        // </div>
+        <></>
     )
 }
 
