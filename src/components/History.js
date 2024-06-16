@@ -186,7 +186,7 @@ function History() {
                         </tbody>
                     </table>
                 </div>
-                <div style={{ marginTop: '1rem' }}>
+                {/* <div style={{ marginTop: '1rem' }}>
                     <nav aria-label="Page navigation example">
                         <ul className="pagination justify-content-center">
                             <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -197,7 +197,7 @@ function History() {
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </div> */}
                 <div className="footer">
                     <Footer />
                 </div>

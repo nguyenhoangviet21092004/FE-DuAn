@@ -268,7 +268,7 @@ export default function Home() {
                     </div>
                     <div className="right"></div>
                 </div>
-                <div style={{ marginTop: '1rem' }}>
+                {/* <div style={{ marginTop: '1rem' }}>
                     <nav aria-label="Page navigation example">
                         <ul className="pagination justify-content-center">
                             <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -280,7 +280,7 @@ export default function Home() {
                             </li>
                         </ul>
                     </nav>
-                </div>
+                </div> */}
 
             </div>
             <div className="footer">

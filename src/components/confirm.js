@@ -188,18 +188,18 @@ function Confirm() {
 
 
             </div>
-            <div style={{ marginTop: '1rem' }}>
+            {/* <div style={{ marginTop: '1rem' }}>
                 <nav aria-label="Page navigation example">
                     <ul className="pagination justify-content-center">
                         <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-                            <a className="page-link" onClick={() => setCurrentPage(currentPage - 1)}>Previous</a>
+                            <a hrefclassName="page-link" onClick={() => setCurrentPage(currentPage - 1)}>Previous</a>
                         </li>{renderPageItems()}
                         <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
                             <a className="page-link" onClick={() => setCurrentPage(currentPage + 1)}>Next</a>
                         </li>
                     </ul>
                 </nav>
-            </div>
+            </div> */}
             <div className="footer">
                 <Footer />
             </div>
