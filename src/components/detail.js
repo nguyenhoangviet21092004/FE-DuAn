@@ -1,4 +1,3 @@
-import Navbar from "./navbar";
 import "../css/detail.css"
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -15,7 +14,6 @@ function Detail() {
     const navigate = useNavigate();
     const [house, setHouse] = useState({});
     const username = sessionStorage.getItem('username');
-    const password = sessionStorage.getItem('password');
     const role = sessionStorage.getItem('role');
     const idAccount = sessionStorage.getItem('account_id'); const price = house.price;
 

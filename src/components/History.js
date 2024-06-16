@@ -9,7 +9,6 @@ import "../css/history.css"
 function History() {
     const [order, setOrder] = useState([]);
     const username = sessionStorage.getItem('username');
-    const password = sessionStorage.getItem('password');
     const role = sessionStorage.getItem('role');
     const idAccount = sessionStorage.getItem('account_id');
     const [today, setToday] = useState(new Date());

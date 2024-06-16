@@ -8,7 +8,6 @@ import "../css/home.css";
 export default function Home() {
     const [houses, setHouses] = useState([]);
     const username = sessionStorage.getItem('username');
-    const password = sessionStorage.getItem('password');
     const role = sessionStorage.getItem('role');
     const idAccount = sessionStorage.getItem('account_id');
     const [currentPage, setCurrentPage] = useState(1);

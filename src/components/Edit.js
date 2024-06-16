@@ -10,7 +10,6 @@ function Edit() {
     const [typeRooms, setTypeRooms] = useState([]);
     const params = useParams();
     const username = sessionStorage.getItem('username');
-    const password = sessionStorage.getItem('password');
     const role = sessionStorage.getItem('role');
     const idAccount = sessionStorage.getItem('account_id');
 

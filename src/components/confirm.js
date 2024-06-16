@@ -14,7 +14,6 @@ function Confirm() {
     const [getid, setid] = useState('');
 
     const username = sessionStorage.getItem('username');
-    const password = sessionStorage.getItem('password');
     const role = sessionStorage.getItem('role');
     const idAccount = sessionStorage.getItem('account_id');
     const [isHidden, setIsHidden] = useState(false)
