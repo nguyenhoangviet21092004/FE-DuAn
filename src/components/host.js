@@ -115,10 +115,10 @@ function HostList() {
                             </button>
                         </Link>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/host">Danh sách nhà cho thuê</a>
+                            <a class="nav-link active" href="https://fe-duan-production.up.railway.app/host">Danh sách nhà cho thuê</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href={`/order/${idAccount}`}>Danh sách đăng ký thuê</a>
+                            <a class="nav-link " href={`https://fe-duan-production.up.railway.app/order/${idAccount}`}>Danh sách đăng ký thuê</a>
                         </li>
                     </ul>
 

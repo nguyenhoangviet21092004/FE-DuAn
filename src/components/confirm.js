@@ -130,10 +130,10 @@ function Confirm() {
                     <div className="container" style={{ minHeight: '19rem' }}>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link " href="/host">Danh sách nhà cho thuê</a>
+                                <a class="nav-link " href="https://fe-duan-production.up.railway.app/host">Danh sách nhà cho thuê</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href={`/order/${idAccount}`}>Danh sách đăng ký thuê</a>
+                                <a class="nav-link active" href={`https://fe-duan-production.up.railway.app//order/${idAccount}`}>Danh sách đăng ký thuê</a>
                             </li>
                         </ul>
                         <table className="custom-table">
@@ -153,7 +153,7 @@ function Confirm() {
                                         <td scope="row">{i + 1}</td>
                                         <td>{order.account.name}</td>
                                         <td>
-                                            <a href={`detail/${order.house.id}`} className="custom-link">
+                                            <a href={`https://fe-duan-production.up.railway.app/detail/${order.house.id}`} className="custom-link">
                                                 {order.house.name}
                                             </a>
                                         </td>
