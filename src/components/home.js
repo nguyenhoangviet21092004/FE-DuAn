@@ -17,7 +17,7 @@ export default function Home() {
 
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
-    const [numberOfBedRoom, setNumberOfBedRoom] = useState(0);
+    // const [numberOfBedRoom, setNumberOfBedRoom] = useState(0);
     const [numberOfBathRoom, setNumberOfBathRoom] = useState(0);
     const [priceFrom, setPriceFrom] = useState(0);
     const [priceTo, setPriceTo] = useState(0);

@@ -52,7 +52,7 @@ function Create() {
 
         return errors;
     };
-    const [numberOfBedRoom, setNumberOfBedRoom] = useState(0);
+    // const [numberOfBedRoom, setNumberOfBedRoom] = useState(0);
     console.log(numberOfBedRoom)
 
 
