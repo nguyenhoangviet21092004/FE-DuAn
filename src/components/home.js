@@ -75,7 +75,6 @@ export default function Home() {
     }
 
     return (
-
         <div className="body">
             <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
                 <nav className="navbar navbar-expand-lg bg-white shadow-sm">
