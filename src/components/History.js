@@ -77,7 +77,7 @@ function History() {
     return (
         <div style={{ height: '100vh' }}>
 
-            <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+            {/* <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
             <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/home">
@@ -119,7 +119,7 @@ function History() {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div> */}
             <body>
                 <div className="container" style={{ marginTop: '2%', minHeight: '19rem' }}>
                     <h2>Danh sách nhà đang thuê</h2>

@@ -190,7 +190,7 @@ function Create() {
     };
     return (
         <div>
-            <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+            {/* <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
             <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/home">
@@ -232,7 +232,7 @@ function Create() {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div> */}
             <div className="container">
                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                     <h1>

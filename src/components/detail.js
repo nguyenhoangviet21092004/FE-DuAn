@@ -192,7 +192,7 @@ function Detail() {
     };
     return (
         <div>
-            <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+            {/* <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
             <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/home">
@@ -234,7 +234,7 @@ function Detail() {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div> */}
 
             <div class="blog-single">
                 <div class="container-fluid " >
