@@ -108,7 +108,7 @@ function History() {
                                                 <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
                                                 <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
                                                 <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                                <li><a className="dropdown-item">Chi tiết tài khoản</a></li>
+                                               
                                             </ul>
                                         </li>
                                     </>
