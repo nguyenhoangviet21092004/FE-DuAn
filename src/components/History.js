@@ -24,14 +24,7 @@ function History() {
         console.log(order);
     }
 
-    // function DateParser({ date }) {
 
-    //     const moments = moment(date);
-    //     setDay(moments.toDate().getDate());
-    //     // const [year, month, day] = date.split('-');
-    //     // console.log(day)
-    //     // setDay(day);
-    // }
 
     useEffect(() => {
         getHistory();
@@ -85,7 +78,7 @@ function History() {
         <div style={{ height: '100vh' }}>
 
             <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
-                <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+            <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/home">
                             <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
@@ -100,7 +93,7 @@ function History() {
                                 {role === 'admin' || role === 'host' ? (
                                     <>
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" z role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {username}
                                             </a>
                                             <ul className="dropdown-menu dropdown-menu-end">
