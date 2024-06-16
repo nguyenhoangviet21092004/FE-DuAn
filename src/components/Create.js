@@ -190,13 +190,13 @@ function Create() {
     };
     return (
         <div>
-            {/* <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
-            <nav className="navbar navbar-expand-lg bg-white shadow-sm">
+   <div className="header" style={{ position: "sticky", top: "0", zIndex: "1000" }}>
+                <nav className="navbar navbar-expand-lg bg-white shadow-sm">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/home">
                             <img src="https://banner2.cleanpng.com/20181122/xfy/kisspng-logo-house-renting-home-housing-5bf774850ed024.2354280415429438770607.jpg" alt="Agoda" style={{ height: "30px" }} />
                         </a>
-                        <a className="nav-link active" aria-current="page" href="/home">Trang chủ</a>
+                        <a className="nav-link active" aria-current="page" href="api-hotel.up.railway.app/home">Trang chủ</a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -206,25 +206,23 @@ function Create() {
                                 {role === 'admin' || role === 'host' ? (
                                     <>
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 {username}
                                             </a>
                                             <ul className="dropdown-menu dropdown-menu-end">
-                                                <li><a className="dropdown-item" href="/host">Chủ nhà</a></li>
-                                                <li><a className="dropdown-item" href="/create">Đăng nhà</a></li>
-                                                <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                                <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
+                                                <li><a className="dropdown-item" href="api-hotel.up.railway.app/host">Chủ nhà</a></li>
+                                                <li><a className="dropdown-item" href="api-hotel.up.railway.app/create">Đăng nhà</a></li>
+                                                <li><a href={`api-hotel.up.railway.app/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
                                             </ul>
                                         </li>
                                     </>
                                 ) : (
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             {username}
                                         </a>
                                         <ul className="dropdown-menu dropdown-menu-end">
-                                            <li><a href={`/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
-                                            <li><a className="dropdown-item" href="#">Chi tiết tài khoản</a></li>
+                                            <li><a href={`api-hotel.up.railway.app/history/${idAccount}`} className="dropdown-item">Lịch sử đặt</a></li>
                                         </ul>
                                     </li>
                                 )}
@@ -232,7 +230,7 @@ function Create() {
                         </div>
                     </div>
                 </nav>
-            </div> */}
+            </div>
             <div className="container">
                 <div style={{ textAlign: "center", marginTop: "5%" }}>
                     <h1>
